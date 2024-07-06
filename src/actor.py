@@ -319,6 +319,18 @@ class Actor:
     def set_upgrade_price(self, price: oead.S32) -> None:
         armor_component: ArmorComponent = self.get_or_add_component("ArmorRef")
         armor_component.upgrade_price = price
+        gp_tbl_component: GameParameterTable = self.get_or_add_component("GameParameterTableRef")
+        enhance_info: oead.byml.Dictionary
+        sys: ResourceSystem = ResourceSystem.get()
+        if (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
+            enhance_info = TypedParam(oead.byml.from_binary(sys.load_file(path)), "game__pouchcontent__EnhancementMaterial").data
+        else:
+            enhance_info = copy_dict(TypedParam.load_default("game__pouchcontent__EnhancementMaterial"))
+        enhance_info["Price"] = price
+        gp_tbl_component._param["Components"]["EnhancementMaterial"] = f"?GameParameter/EnhancementMaterial/{self._name}.game__pouchcontent__EnhancementMaterial.bgyml"
+        gp_tbl_component._needs_save = True
+        sys.save_archive_file(f"GameParameter/EnhancementMaterial/{self._name}.game__pouchcontent__EnhancementMaterial.bgyml",
+                                oead.byml.to_binary(enhance_info, False, 7), ResourceSystem.ARCHIVE_CURRENT)
     
     def add_armor_effect(self, effect: str, level: oead.S32 = 1) -> None:
         armor_component: ArmorComponent = self.get_or_add_component("ArmorRef")
@@ -335,9 +347,23 @@ class Actor:
         armor_component: ArmorComponent = self.get_or_add_component("ArmorRef")
         armor_component.add_hide_group(group_name, materials)
 
+    # didn't realize there was an EnhancementMaterial component...
+    # too lazy to change how this works though so have this
     def add_armor_upgrade_material(self, material: str, count: oead.S32) -> None:
         armor_component: ArmorComponent = self.get_or_add_component("ArmorRef")
         armor_component.add_upgrade_material(material, count)
+        gp_tbl_component: GameParameterTable = self.get_or_add_component("GameParameterTableRef")
+        enhance_info: oead.byml.Dictionary
+        sys: ResourceSystem = ResourceSystem.get()
+        if (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
+            enhance_info = TypedParam(oead.byml.from_binary(sys.load_file(path)), "game__pouchcontent__EnhancementMaterial").data
+        else:
+            enhance_info = copy_dict(TypedParam.load_default("game__pouchcontent__EnhancementMaterial"))
+        enhance_info["Items"].append(to_dict({"Actor" : material, "Number" : count}))
+        gp_tbl_component._param["Components"]["EnhancementMaterial"] = f"?GameParameter/EnhancementMaterial/{self._name}.game__pouchcontent__EnhancementMaterial.bgyml"
+        gp_tbl_component._needs_save = True
+        sys.save_archive_file(f"GameParameter/EnhancementMaterial/{self._name}.game__pouchcontent__EnhancementMaterial.bgyml",
+                                oead.byml.to_binary(enhance_info, False, 7), ResourceSystem.ARCHIVE_CURRENT)
 
     def add_shield_hide_group(self, group_name: str, materials: List[str]) -> None:
         shield_component: ShieldComponent = self.get_or_add_component("ShieldRef")
