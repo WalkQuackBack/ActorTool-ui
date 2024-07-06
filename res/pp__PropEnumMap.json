@@ -1,0 +1,74 @@
+{
+    "pp__PropEnumMap<AttachPriorityScoreCofi,f32>": [
+        ["None", "SmallSword", "LargeSword", "Spear", "Beamos", "FlameThrower", "SnowMachine", "BalloonEnvelope", "Wing", "Pile", "Chaser", "ElectricGenerator", "LightMirror", "Rocket", "FlashLight", "SlipBoard", "CookSet", "Cart", "WindGenerator", "ControlStick", "FastWheel", "LargeWheel", "FloatingStone", "WaterPump", "Cannon", "SpringPiston", "EnergyBank", "TimerBomb", "GolemHead", "TiltingDoll", "Others"],
+        1.0
+    ],
+    "pp__PropEnumMap<CubeCoreBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<CubeCoreBindWeightTableFirst,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<UFOCoreBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<UFOCoreBindWeightTableFirst,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<UFOTBlockBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<SearchTBlockBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<GiantCoreBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<GiantCoreBindWeightTableFirst,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<GiantTBlockBindWeightTable,f32>": [
+        ["HeadParts_Top", "HeadParts_M_R", "HeadParts_M_L", "HeadParts_M_C", "HeadParts_F_R", "HeadParts_F_L", "HeadParts_B_R", "HeadParts_B_L", "HeadParts_B_C", "SpineParts_1", "SpineParts_2", "ArmParts_1_R", "ArmParts_2_R", "ArmParts_3_R", "WristParts_R", "ArmParts_1_L", "ArmParts_2_L", "ArmParts_3_L", "WristParts_L", "LegParts_1_R", "LegParts_2_R", "Ankle_R", "Toe_R", "LegParts_1_L", "LegParts_2_L", "Ankle_L", "Toe_L"],
+        0.0
+    ],
+    "pp__PropEnumMap<ChmAtkChargeUpRate,f32>": [
+        ["SmallSword", "LargeSword", "Spear"],
+        0.0
+    ],
+    "pp__PropEnumMap<DamageAttrs,bool>": [
+        ["ComboStart", "ComboContinue", "ComboFinish", "GuardSuccessNoReaction", "GuardBreak", "GuardBreakShieldDrop", "GuardPierceAll", "GuardPierceShieldOnly", "DamageGuarantee", "NoKnockback", "ForceSuperSmash", "HeadshotPossible", "Critical", "Stealth", "Reflectable", "ShatterLv1", "ShatterLv2", "ShatterLv3", "StrongShatter", "Sharp", "Sweep", "Eat", "TreeCut", "NoDurabilityDamage", "Instakill", "GuardBreakStrong", "Blunt", "ArmorBreak", "HardMiasma", "IsEffectiveToGanonInfluenceEnemy", "Fear", "AncientWeapon", "ExtraThrowDamage", "Rush", "HystericalStrength", "RequestKeepGuard", "EnviromentDestruction", "IsEffectiveToWeakGanonInfluenceEnemy", "SmashIntensityStrongest", "WeaponRicketyCritical", "GuardSuccessNoReactionExceptGuardJust", "MinimumDamageAttack", "RaumiConsumeGuardBreakMaxPoints", "FearStrong", "ZonauGearLapse", "PlayerChargeAttack", "ForceSmashRaumiGolem", "SmashReactionRequiredAttack", "ForceDismount", "FullMiasmaDamage", "ThrownBoomerang", "RaumiConsumeGuardBreakHalfMaxPoints", "PreventSameAttackUntilAttackIdChanges", "CalcKnockBackDirUseAttakerPos", "ZonauGearChangeStateOn", "WeaponThrow", "IsRepelledByExplosiveAttachmentShield", "PlayerSpinAttack"],
+        false
+    ],
+    "pp__PropEnumMap<DamageElements,bool>": [
+        ["Fire", "Ice", "Electric", "Wind", "Water", "Light", "Miasma", "Confuse", "Bomb"],
+        false
+    ],
+    "pp__PropEnumMap<DamageFlags,bool>": [
+        ["IsConsiderIneffectual", "IsDamaged", "IsGuardSucceeded", "IsGuardDodge", "IsGuardJust", "IsDamageSourceByWeakPoint", "IsDamageSourceByEntityMaterial", "IsHitTree", "IsValidShatterAttack", "IsFrozenBrokenDamage", "IsDamageByEntityAt", "IsDeadByAncinentWeapon", "IsHitAffiliationObject", "IsHitAffiliationGround", "IsHitAffiliationTreant", "IsHitMasterSwordFullAwaken"],
+        false
+    ],
+    "pp__PropEnumMap<DamageTypes,bool>": [
+        ["Undefined", "Body", "SmallWeapon", "LargeWeapon", "ThrustWeapon", "Shield", "Arrow", "Bomb", "Impulse", "Shockwave", "Fire", "Ice", "Electric", "Durability", "Beam", "Purification", "Miasma", "Gust", "Spike", "EnergyWall", "Water"],
+        false
+    ],
+    "pp__PropEnumMap<DeathEffectXLinkKeys,sead::SafeString>": [
+        ["Default", "Burned", "Transform", "PickedUp", "ChemicalCriticalHitIce", "ChemicalCriticalHitFire", "AncientWeapon", "AttachmentUseEffect", "PhysicsKinematicCollision"],
+        ""
+    ],
+    "pp__PropEnumMap<List,sead::SafeString>": [
+        ["Invalid", "Broadleaf", "Coniferous", "WhiteBirch", "Maple", "PalmFirone", "PalmBeach", "type007", "ConiferousC", "type009", "Willow", "Cherry", "Pine", "Ume", "BroadleafSky", "Minus", "MinusB", "MinusC", "MinusD"],
+        ""
+    ],
+    "pp__PropEnumMap<MiasmaWeaponUseRate,f32>": [
+        ["Level1", "Level2", "Level3"],
+        1.0
+    ]
+}
