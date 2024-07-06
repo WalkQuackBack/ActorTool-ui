@@ -212,7 +212,7 @@ class ArmorComponent(BgymlComponent):
 
     def add_effect(self, effect: str, level: oead.S32 | None = None) -> None:
         self._param["ArmorEffect"].append(to_dict({
-            "ArmorEffectType" : effect, "ArmorEffectLevel" : oead.U32(1) if level is None else level
+            "ArmorEffectLevel" : oead.U32(1) if level is None else level, "ArmorEffectType" : effect
         }))
         self._needs_save = True
 
