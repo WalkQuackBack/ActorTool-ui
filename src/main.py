@@ -12,3 +12,4 @@ if __name__ == "__main__":
 
     actor = Actor.copy(new_actor, base_actor)
     actor.save()
+    app.save()

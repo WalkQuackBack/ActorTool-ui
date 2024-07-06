@@ -138,8 +138,6 @@ class Actor:
     def save(self) -> None:
         if self._pack is not None:
             self._pack.save()
-        app: App = App.get()
-        app.save()
 
     def copy_flags(self, old: str, preset: List[List[str | List[tuple[str, str]]]]) -> bool:
         gmd_mgr: GameDataMgr = GameDataMgr.get()
@@ -157,6 +155,8 @@ class Actor:
         return handles
     
     def get_or_add_component(self, name: str) -> ComponentBase:
+        if self._pack is None:
+            self._pack = ActorPack(self._name)
         component: ComponentBase | None = self._pack.get_component(name)
         if component is not None:
             return component
