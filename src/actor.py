@@ -118,7 +118,7 @@ class Actor:
             if (armor_component := actor._pack.get_component("ArmorRef")) is not None:
                 armor_component.copy(base_actor_name, name)
             if (gp_tbl_component := actor._pack.get_component("GameParameterTableRef")) is not None:
-                if (path:= gp_tbl_component._param["Components"]["EnemyCommonParam"]) != "":
+                if "EnemyCommonParam" in gp_tbl_component._param["Components"] and (path:= gp_tbl_component._param["Components"]["EnemyCommonParam"]) != "":
                     actor.copy_flags(base_actor_name, Actor.GENERIC_ENEMY)
                     # scuffed saving bc I don't feel like implementing GameParameterTable
                     gmd_mgr: GameDataMgr = GameDataMgr.get()
@@ -322,7 +322,7 @@ class Actor:
         gp_tbl_component: GameParameterTable = self.get_or_add_component("GameParameterTableRef")
         enhance_info: oead.byml.Dictionary
         sys: ResourceSystem = ResourceSystem.get()
-        if (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
+        if "EnhancementMaterial" in gp_tbl_component._param["Components"] and (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
             enhance_info = TypedParam(oead.byml.from_binary(sys.load_file(path)), "game__pouchcontent__EnhancementMaterial").data
         else:
             enhance_info = copy_dict(TypedParam.load_default("game__pouchcontent__EnhancementMaterial"))
@@ -355,7 +355,7 @@ class Actor:
         gp_tbl_component: GameParameterTable = self.get_or_add_component("GameParameterTableRef")
         enhance_info: oead.byml.Dictionary
         sys: ResourceSystem = ResourceSystem.get()
-        if (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
+        if "EnhancementMaterial" in gp_tbl_component._param["Components"] and (path := gp_tbl_component._param["Component"]["EnhancementMaterial"]) != "":
             enhance_info = TypedParam(oead.byml.from_binary(sys.load_file(path)), "game__pouchcontent__EnhancementMaterial").data
         else:
             enhance_info = copy_dict(TypedParam.load_default("game__pouchcontent__EnhancementMaterial"))
