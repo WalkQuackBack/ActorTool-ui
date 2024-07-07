@@ -29,12 +29,19 @@ class TagTable:
         tag_data.frombytes(data["BitTable"])
         tag_data.bytereverse()
         self._actors: Dict[str, List[str]] = {}
+        self._scenes: Dict[str, List[str]] = {}
         actor_count: int = int(len(data["PathList"]) / 3)
         for actor_id in range(actor_count):
-            self._actors[name := data["PathList"][actor_id * 3 + 1]] = []
-            for tag_id, tag in enumerate(self._tags):
-                if tag_data[actor_id * tag_count + tag_id]:
-                    self._actors[name].append(tag)
+            if data["PathList"][actor_id * 3 + 2] == ".engine__actor__ActorParam.gyml":
+                self._actors[name := data["PathList"][actor_id * 3 + 1]] = []
+                for tag_id, tag in enumerate(self._tags):
+                    if tag_data[actor_id * tag_count + tag_id]:
+                        self._actors[name].append(tag)
+            else:
+                self._scenes[name := data["PathList"][actor_id * 3 + 1]] = []
+                for tag_id, tag in enumerate(self._tags):
+                    if tag_data[actor_id * tag_count + tag_id]:
+                        self._scenes[name].append(tag)
         self._is_changed: bool = False
         
     def serialize(self) -> bytes | None:
@@ -42,6 +49,8 @@ class TagTable:
             self._tags.sort()
             actors: List[str] = list(self._actors.keys())
             actors.sort()
+            scenes: List[str] = list(self._scenes.keys())
+            scenes.sort()
             output: oead.byml.Dictionary = to_dict({
                 "BitTable" : oead.Bytes(b''),
                 "PathList" : to_array([]),
@@ -56,6 +65,15 @@ class TagTable:
                 output["PathList"].append(".engine__actor__ActorParam.gyml")
                 for tag in self._tags:
                     if tag not in self._actors[actor]:
+                        bits.append(0)
+                    else:
+                        bits.append(1)
+            for scene in scenes:
+                output["PathList"].append("Work/Scene/")
+                output["PathList"].append(scene)
+                output["PathList"].append(".engine__scene__SceneParam.gyml")
+                for tag in self._tags:
+                    if tag not in self._scenes[scene]:
                         bits.append(0)
                     else:
                         bits.append(1)
